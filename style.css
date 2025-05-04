@@ -1,83 +1,136 @@
-    /* General styles for containers */
+/* General Reset */
+body, h1, h2, h3, p, ul, li, ol, img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.recipe-container {
-    font-family: 'Arial', sans-serif; /* Use Arial font */
-    font-size: 1rem; /* Standard font size */
-    line-height: 1.6; /* Increase line spacing for readability */
-    color: #333; /* Dark gray color */
-    background-color: #f8f9fa; /* Light gray background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px; /* Padding inside the container */
-    margin: 20px auto; /* Center align the container */
-    width: 90%; /* Full width of the container */
-    /* Responsive design */
-    @media (max-width: 768px) {
-      width: 100%; /* Full width on smaller screens */
-      padding: 10px; /* Less padding on smaller screens */
-    }
-    @media (max-width: 480px) {
-      width: 100%; /* Full width on mobile screens */
-      padding: 5px; /* Less padding on mobile screens */
-    }
-    max-width: 1200px; /* Maximum width of the container */
-    margin: 0 auto; /* Center align the container */
-    padding: 20px; /* Padding inside the container */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px; /* Add space between the columns */
-  }
-  
-    .ingredients {
-        font-family: 'Arial', sans-serif; /* Use Arial font */
-        font-size: 1rem; /* Standard font size */
-        line-height: 1.6; /* Increase line spacing for readability */
-        color: #333; /* Dark gray color */
-        background-color: #f8f9fa; /* Light gray background */
-        flex: 1.5; /* Allow the ingredients section to take up one part of the space */
-        padding: 10px; /* Padding inside the ingredients section */
-        margin-right: 20px; /* Space between ingredients and instructions */
-    }
-  
-    .instructions {
-            font-family: 'Arial', sans-serif; /* Use Arial font */
-            font-size: 1rem; /* Standard font size */
-            line-height: 1.6; /* Increase line spacing for readability */
-            color: #333; /* Dark gray color */
-            background-color: #f8f9fa; /* Light gray background */
-            flex: 2; /* Allow the instructions section to take up two parts of the space */
-            padding: 10px; /* Padding inside the instructions section */
-            margin-left: 20px; /* Space between ingredients and instructions */
-            
-        }
+body {
+  font-family: 'Georgia', serif; /* Serif font family */
+  line-height: 1.6;
+  color: #000; /* Black body text */
+  background-color: #f4f4f4; /* Muted background color */
+  padding: 20px;
+}
 
+/* Recipe Section */
+.recipe {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff; /* White background for content */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
-.info-container {
-    font-family: 'Arial', sans-serif; /* Use Arial font */
-    font-size: 1rem; /* Standard font size */
-    line-height: 1.6; /* Increase line spacing for readability */
-    color: #333; /* Dark gray color */
-    background-color: #f8f9fa; /* Light gray background */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 20px auto; /* Center align the container */
-    width: 90%; /* Full width of the container */
-    /* Responsive design */
-    @media (max-width: 768px) {
-      width: 100%; /* Full width on smaller screens */
-      padding: 10px; /* Less padding on smaller screens */      
-          }
-    @media (max-width: 480px) {
-      width: 100%; /* Full width on mobile screens */
-      padding: 5px; /* Less padding on mobile screens */
-    }
-    max-width: 1200px; /* Maximum width of the container */
-    margin: 0 auto; /* Center align the container */
-    padding: 20px; /* Padding inside the container */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px; /* Add space between the columns */
-  }
+/* Recipe Header */
+.recipe-header {
+  text-align: center; /* Center heading, description, and image */
+  margin-bottom: 20px;
+}
+
+.recipe-header h1 {
+  font-size: 2rem;
+  color: #333; /* Muted heading color */
+  margin-bottom: 10px;
+}
+
+.recipe-header .description {
+  font-size: 1.2rem;
+  color: #555; /* Slightly muted description color */
+  margin-bottom: 20px;
+}
+
+.recipe-header img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Info Section and Image */
+.info-image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Add space between the info and the image */
+  margin-bottom: 20px;
+}
+
+.info-image-container .info {
+  flex: 1; /* Allow the info section to take up one part of the space */
+}
+
+.info-image {
+  flex: 1; /* Allow the image to take up one part of the space */
+  max-width: 300px; /* Limit the width of the image */
+  border-radius: 8px; /* Add rounded corners to the image */
+}
+
+.info {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px; /* Add more padding for a larger container */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make it full-width */
+  max-width: 600px; /* Limit the width for better readability */
+  text-align: center; /* Center-align the text */
+}
+
+.info p {
+  margin-bottom: 10px;
+}
+
+/* Ingredients Section */
+.ingredients-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Add space between the columns */
+  margin-bottom: 20px; /* Add more space below the ingredients section */
+}
+
+.ingredients-column {
+  flex: 1; /* Allow both columns to take up equal space */
+}
+
+.ingredients-column h3 {
+  font-size: 1.2rem;
+  color: #333; /* Muted heading color */
+  margin-bottom: 10px;
+}
+
+.ingredients-column ul {
+  margin-left: 10px; /* Indent the list */
+}
+
+.ingredients-column ul li {
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+/* Instructions Section */
+.instructions ol li {
+  margin-bottom: 10px;
+}
+
+.shop-button-container {
+  text-align: center; /* Center the button */
+  margin-top: 30px; /* Add space above the button */
+}
+
+.shop-button {
+  display: inline-block;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding for the button */
+  border: 2px solid #ccc; /* Grey border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.shop-button:hover {
+  background-color: #f4f4f4; /* Light grey background on hover */
+  color: #000; /* Keep text black */
+  border-color: #999; /* Darker grey border on hover */
+}
