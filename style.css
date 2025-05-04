@@ -51,19 +51,27 @@ body {
 .info-image-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch; /* Ensure both elements stretch to the same height */
   gap: 20px; /* Add space between the info and the image */
   margin-bottom: 20px;
 }
 
-.info-image-container .info {
+.info {
   flex: 1; /* Allow the info section to take up one part of the space */
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px; /* Add padding inside the info section */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Ensure content inside the info section stacks vertically */
+  justify-content: center; /* Center the content vertically */
 }
 
 .info-image {
   flex: 1; /* Allow the image to take up one part of the space */
   max-width: 300px; /* Limit the width of the image */
   border-radius: 8px; /* Add rounded corners to the image */
+  object-fit: cover; /* Ensure the image scales properly */
 }
 
 .info {
